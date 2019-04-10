@@ -5,7 +5,7 @@ var appKey = 'xkvNkxxAK6DRf0zKzxYB07CO';
 AV.initialize(appId, appKey);
 
 // 请换成你自己的一个房间的 conversation id（这是服务器端生成的）
-var roomId = '5c51436767f356004bc025a9';
+var roomId = '5cad7468a91c930070aaf1c0';
 
 // 每个客户端自定义的 id
 var clientId = 'LeanCloud';
