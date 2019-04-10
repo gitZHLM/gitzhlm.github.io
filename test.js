@@ -29,7 +29,6 @@ var firstFlag = true;
 var logFlag = false;
 
 var loginBtn = document.getElementById('login-btn');
-var signUpBtn = document.getElementById('signup-btn');
 var sendBtnAsFile = document.getElementById('send-btn-as-file');
 var sendBtn = document.getElementById('send-btn');
 var inputName = document.getElementById('input-name');
@@ -42,7 +41,6 @@ var printWall = document.getElementById('print-wall');
 var msgTime;
 
 bindEvent(loginBtn, 'click', login);
-bindEvent(signUpBtn, 'click', signUp);
 bindEvent(sendBtn, 'click', sendMsg);
 bindEvent(sendBtnAsFile, 'click', sendMsgAsFile);
 
@@ -55,17 +53,6 @@ bindEvent(document.body, 'keydown', function(e) {
     }
   }
 });
-
-function signUp() {
-  AV.User.signUp(inputName.value, inputPassword.value)
-    .then(function(user) {
-      showLog('注册成功');
-      login();
-    })
-    .catch(function(error) {
-      showLog('注册失败：' + error.message);
-    });
-}
 
 function login() {
   showLog('正在登录');
